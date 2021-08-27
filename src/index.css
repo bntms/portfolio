@@ -12,3 +12,8 @@ html {
   font-size: calc(1vw + 1vh + 0.5vmin * 3.5);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+*::selection {
+  background-color: #000;
+  color: #fff;
+}
