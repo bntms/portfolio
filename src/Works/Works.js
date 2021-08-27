@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useRect } from '@reach/rect';
 import Wrapper from '../Wrapper/Wrapper';
@@ -49,8 +49,9 @@ const Works = ({ category }) => {
 
     if (!projectId) return;
 
-    const friendlyUrlTitle = projects.find(project => project.id === projectId)
-      .friendlyUrlTitle;
+    const friendlyUrlTitle = projects.find(
+      project => project.id === projectId
+    ).friendlyUrlTitle;
 
     setFriendlyUrlTitle(friendlyUrlTitle);
     setHoveredElement(hoveredElement);

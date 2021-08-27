@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Wrapper from '../Wrapper/Wrapper';
 import { photosPlaceholder } from './photosPlaceholder';
 import './startPage.css';

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useRect } from '@reach/rect';
 import Selected from '../Selected/Selected';
 import { links } from '../links';

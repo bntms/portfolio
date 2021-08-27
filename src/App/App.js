@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { LastLocationProvider } from 'react-router-last-location';
 import StartPage from '../StartPage/StartPage';

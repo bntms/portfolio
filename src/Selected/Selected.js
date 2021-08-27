@@ -1,4 +1,3 @@
-import React from 'react';
 import './selected.css';
 
 const Selected = ({ height }) => (

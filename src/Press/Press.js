@@ -1,4 +1,3 @@
-import React from 'react';
 import PressLink from './PressLink';
 
 import Wrapper from '../Wrapper/Wrapper';

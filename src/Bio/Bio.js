@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Wrapper from '../Wrapper/Wrapper';
 import { useHistory } from 'react-router-dom';
 import useBio from './useBio';

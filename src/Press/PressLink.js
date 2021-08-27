@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './pressLink.css';
 
 const PressLink = ({ title, domain, url }) => (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Works from './Works';
 import Contact from './Contact';
 import Links from './Links';
@@ -16,8 +16,8 @@ const StartPageMobile = ({
   const [contentHeight, setContentHeight] = useState(0);
 
   useEffect(() => {
-    const contentHeight = document.querySelector('.start-page-mobile')
-      .offsetHeight;
+    const contentHeight =
+      document.querySelector('.start-page-mobile').offsetHeight;
     setContentHeight(contentHeight);
   }, [toggleCategory]);
 
