@@ -157,10 +157,12 @@
 
 .prev-photo {
   left: 0;
+  cursor: w-resize;
 }
 
 .next-photo {
   right: 0;
+  cursor: e-resize;
 }
 
 .aria-prev-photo,
