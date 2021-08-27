@@ -1,0 +1,33 @@
+.press-container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: calc(100% * 8 / 9 - 0.5px) 1fr;
+  grid-gap: 1px;
+  background-color: #000;
+}
+
+.press {
+  background-color: #fff;
+  padding: 21px;
+  overflow: scroll;
+}
+
+.press::-webkit-scrollbar {
+  display: none;
+}
+
+.press ul {
+  margin: 0;
+  padding: 0;
+}
+
+.press li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.4rem;
+}
+
+.press li:last-of-type {
+  margin: 0;
+}

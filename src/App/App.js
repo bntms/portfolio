@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { LastLocationProvider } from 'react-router-last-location';
 import StartPage from '../StartPage/StartPage';
 import Bio from '../Bio/Bio';
+import Press from '../Press/Press';
 import Works from '../Works/Works';
 import Project from '../Project/Project';
 import StartPageMobile from '../StartPageMobile/StartPageMobile';
@@ -106,10 +107,11 @@ const App = () => {
           <Route
             exact
             path="/bio"
-            render={({ match }) => (
+            render={() => (
               <Bio toggleLanguage={toggleLanguage} language={language} />
             )}
           />
+          <Route exact path="/press" render={() => <Press />} />
           <Route
             exact
             path="/:category"

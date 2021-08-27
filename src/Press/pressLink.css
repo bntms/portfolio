@@ -1,0 +1,11 @@
+.pressLink {
+  color: #000;
+  text-transform: uppercase;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 0.6rem;
+}
+
+.articleTitle {
+  font-size: 0.48rem;
+  font-family: 'Cormorant Garamond', serif;
+}

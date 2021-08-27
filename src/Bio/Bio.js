@@ -9,12 +9,14 @@ import './bio.css';
 
 const Bio = ({ language, toggleLanguage }) => {
   const [isBioExpanded, setIsBioExpanded] = useState(false);
+  const lastLocation = useLastLocation();
   const history = useHistory();
   const bio = useBio(language);
-  const lastLocation = useLastLocation();
 
   const goBack = () => {
-    if (lastLocation) {
+    if (lastLocation?.pathname === '/press') {
+      history.go(-3);
+    } else if (lastLocation) {
       history.goBack();
     } else {
       history.push('/');
@@ -37,13 +39,19 @@ const Bio = ({ language, toggleLanguage }) => {
       <div className="bio-container">
         <div className="contact-bio">
           <ul className="contact">
-            <li className="contact-title">Links</li>
-            <li>
-              <a href={links.studiob} target="_blank" rel="noopener noreferrer">
-                StudioB
+            <li className="contact-title">
+              <a href="#/press">Press</a>
+            </li>
+            <li className="contact-title">
+              <a
+                href={links.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
               </a>
             </li>
-            <li>
+            <li className="contact-title">
               <a
                 href={links.viztorony}
                 target="_blank"
@@ -52,12 +60,16 @@ const Bio = ({ language, toggleLanguage }) => {
                 Viztorony
               </a>
             </li>
-            <li>
+            <li className="contact-title">
               <a href={links.palma} target="_blank" rel="noopener noreferrer">
                 Palma
               </a>
             </li>
-            <li className="contact-title">Contact</li>
+            <li className="contact-title">
+              <a href={links.studiob} target="_blank" rel="noopener noreferrer">
+                StudioB
+              </a>
+            </li>
             <li className="contact-tel">{links.tel}</li>
             <li>
               <a href={`mailto:${links.mail}`}>{links.mail}</a>
