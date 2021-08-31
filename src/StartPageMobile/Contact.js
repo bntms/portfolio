@@ -39,11 +39,6 @@ const Contact = ({ isOpen, toggleContact }) => {
               {links.address}
             </a>
           </li>
-          <li className="contact-mobile">
-            <a href={links.behance} target="_blank" rel="noopener noreferrer">
-              Behance
-            </a>
-          </li>
         </ul>
       )}
     </>

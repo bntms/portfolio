@@ -29,8 +29,8 @@ const Links = ({ isOpen, toggleLinks }) => {
       {isOpen && (
         <ul className="link-mobile__wrapper">
           <li className="link-mobile">
-            <a href={links.studiob} target="_blank" rel="noopener noreferrer">
-              StudioB
+            <a href={links.instagram} target="_blank" rel="noopener noreferrer">
+              Instagram
             </a>
           </li>
           <li className="link-mobile">
@@ -41,6 +41,11 @@ const Links = ({ isOpen, toggleLinks }) => {
           <li className="link-mobile">
             <a href={links.palma} target="_blank" rel="noopener noreferrer">
               Palma
+            </a>
+          </li>
+          <li className="link-mobile">
+            <a href={links.studiob} target="_blank" rel="noopener noreferrer">
+              StudioB
             </a>
           </li>
         </ul>

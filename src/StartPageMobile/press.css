@@ -1,0 +1,52 @@
+.press-mobile__title,
+.press-mobile a {
+  display: flex;
+  align-items: center;
+  height: calc((100vh - 12px) / 13);
+  border-bottom: 1px solid #000;
+  padding-left: 21px;
+}
+
+.press-mobile__title {
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.press-mobile__title--open {
+  cursor: default;
+}
+
+.press-mobile__close {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.press-mobile__wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.press-mobile li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.press-mobile a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.85rem;
+}
+
+.press-mobile__domain {
+  text-transform: uppercase;
+}
+
+.press-mobile__article-title {
+  font-family: 'Cormorant Garamond', serif;
+  width: calc(100vw - 42px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

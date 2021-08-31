@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Works from './Works';
 import Contact from './Contact';
 import Links from './Links';
+import Press from './Press';
 import Bio from './Bio';
 import EmptyRows from './EmptyRows';
 import './startPageMobile.css';
@@ -42,6 +43,10 @@ const StartPageMobile = ({
         <Links
           isOpen={isCategoryOpen['links']}
           toggleLinks={() => toggleCategory('links')}
+        />
+        <Press
+          isOpen={isCategoryOpen['press']}
+          togglePress={() => toggleCategory('press')}
         />
         <Bio
           isOpen={isCategoryOpen['bio']}

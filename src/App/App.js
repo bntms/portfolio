@@ -18,7 +18,8 @@ const App = () => {
     object: false,
     experiment: false,
     contact: false,
-    links: false
+    links: false,
+    press: false
   });
   const [projects, setProjects] = useState({
     architecture: [],
