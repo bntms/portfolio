@@ -67,7 +67,7 @@ const Bio = ({ language, toggleLanguage }) => {
             </li>
             <li className="contact-title">
               <a href={links.studiob} target="_blank" rel="noopener noreferrer">
-                StudioB
+                MOME StudioB
               </a>
             </li>
             <li className="contact-tel">{links.tel}</li>

@@ -45,7 +45,7 @@ const Links = ({ isOpen, toggleLinks }) => {
           </li>
           <li className="link-mobile">
             <a href={links.studiob} target="_blank" rel="noopener noreferrer">
-              StudioB
+              MOME StudioB
             </a>
           </li>
         </ul>
