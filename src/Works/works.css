@@ -127,6 +127,7 @@
 .works-category-selected {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .works-category-selected,

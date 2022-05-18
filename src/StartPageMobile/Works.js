@@ -1,12 +1,11 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { useRect } from '@reach/rect';
 import Selected from '../Selected/Selected';
 import './works.css';
 
 const Works = ({ projects, category, isOpen, toggleCategory }) => {
-  const ref = useRef();
-  const rect = useRect(ref);
+  const ref = useRef(null);
+  const selectedIconHeight = ref.current?.getBoundingClientRect()?.height;
 
   return (
     <>
@@ -22,7 +21,7 @@ const Works = ({ projects, category, isOpen, toggleCategory }) => {
         {category}
         {isOpen && (
           <div className="works-mobile__close" onClick={toggleCategory}>
-            <Selected height={rect && rect.height} />
+            <Selected height={selectedIconHeight} />
           </div>
         )}
       </div>

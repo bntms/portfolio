@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { useRect } from '@reach/rect';
 import Wrapper from '../Wrapper/Wrapper';
 import ProjectPager from './ProjectPager';
 import './project.css';
@@ -9,8 +8,8 @@ const Project = ({ category, projectTitle, language, toggleLanguage }) => {
   const [project, setProject] = useState({ photos: [{ photoUrl: '' }] });
   const [indexOfPhoto, setIndexOfPhoto] = useState(0);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
-  const ref = useRef();
-  const rect = useRect(ref);
+  const ref = useRef(null);
+  const rect = ref.current?.getBoundingClientRect();
 
   useEffect(() => {
     const fetchProject = async (title, categoryName = category) => {
@@ -89,18 +88,16 @@ const Project = ({ category, projectTitle, language, toggleLanguage }) => {
             <>
               <span
                 className="project-category-selected"
-                style={{ width: rect && rect.width / 4 }}
+                style={{ width: rect && rect?.width / 4 }}
               >
                 {categoryName}
               </span>
-              {rect && (
-                <ProjectPager
-                  counter={counter}
-                  height={rect.height}
-                  project={project}
-                  category={category}
-                />
-              )}
+              <ProjectPager
+                counter={counter}
+                height={rect?.height}
+                project={project}
+                category={category}
+              />
             </>
           ) : (
             <Link to={`/${categoryName}`} className="project-category-element">

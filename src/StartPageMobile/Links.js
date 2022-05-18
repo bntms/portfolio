@@ -1,12 +1,11 @@
 import { useRef } from 'react';
-import { useRect } from '@reach/rect';
 import Selected from '../Selected/Selected';
 import { links } from '../links';
 import './links.css';
 
 const Links = ({ isOpen, toggleLinks }) => {
-  const ref = useRef();
-  const rect = useRect(ref);
+  const ref = useRef(null);
+  const selectedIconHeight = ref.current?.getBoundingClientRect()?.height;
 
   return (
     <>
@@ -22,7 +21,7 @@ const Links = ({ isOpen, toggleLinks }) => {
         Links
         {isOpen && (
           <div className="link-mobile__close" onClick={toggleLinks}>
-            <Selected height={rect && rect.height} />
+            <Selected height={selectedIconHeight} />
           </div>
         )}
       </div>

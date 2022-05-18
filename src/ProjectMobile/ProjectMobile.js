@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
-import { useRect } from '@reach/rect';
 import LazyLoad from 'react-lazyload';
 import smoothscroll from 'smoothscroll-polyfill';
 import MobileClose from './MobileClose';
@@ -10,8 +9,8 @@ const ProjectMobile = ({ language, toggleLanguage }) => {
   const [project, setProject] = useState({ photos: [{ photoUrl: '' }] });
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
   const { category, projectTitle } = useParams();
-  const ref = useRef();
-  const rect = useRect(ref);
+  const ref = useRef(null);
+  const rect = ref.current?.getBoundingClientRect();
   const width = window.innerWidth;
 
   useEffect(() => {
@@ -49,7 +48,7 @@ const ProjectMobile = ({ language, toggleLanguage }) => {
     <main>
       <header className="project-mobile__header" ref={ref}>
         {project.title}
-        <MobileClose height={rect && rect.height} />
+        <MobileClose height={rect?.height} />
       </header>
       <section
         className={
@@ -70,7 +69,7 @@ const ProjectMobile = ({ language, toggleLanguage }) => {
               <LazyLoad height={width} offset={width} once>
                 <div
                   className="project-mobile__photo"
-                  style={{ height: rect && rect.width }}
+                  style={{ height: rect?.width }}
                 >
                   <img src={photo.photoUrl} alt="" />
                 </div>

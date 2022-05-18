@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { useRect } from '@reach/rect';
 import Wrapper from '../Wrapper/Wrapper';
 import Selected from '../Selected/Selected';
 import { projectsPlaceholder } from './projectsPlaceholder';
@@ -11,8 +10,8 @@ const Works = ({ category }) => {
   const [hoveredElement, setHoveredElement] = useState('');
   const [friendlyUrlTitle, setFriendlyUrlTitle] = useState('');
   const [projects, setProjects] = useState(projectsPlaceholder);
-  const ref = useRef();
-  const rect = useRect(ref);
+  const ref = useRef(null);
+  const selectedIconHeight = ref.current?.getBoundingClientRect()?.height;
 
   useEffect(() => {
     fetchProjectsForCategory(category);
@@ -136,7 +135,7 @@ const Works = ({ category }) => {
                       <div className="works-category-selected">
                         {categoryName}
                         <Link to="/" className="works-close">
-                          {rect && <Selected height={rect.height} />}
+                          <Selected height={selectedIconHeight} />
                         </Link>
                       </div>
                     ) : (
