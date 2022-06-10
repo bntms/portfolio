@@ -8,8 +8,8 @@ const Project = ({ category, projectTitle, language, toggleLanguage }) => {
   const [project, setProject] = useState({ photos: [{ photoUrl: '' }] });
   const [indexOfPhoto, setIndexOfPhoto] = useState(0);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+  const [rect, setRect] = useState(null);
   const ref = useRef(null);
-  const rect = ref.current?.getBoundingClientRect();
 
   useEffect(() => {
     const fetchProject = async (title, categoryName = category) => {
@@ -28,8 +28,23 @@ const Project = ({ category, projectTitle, language, toggleLanguage }) => {
   }, [category, projectTitle, language]);
 
   useEffect(() => {
+    setRect(ref.current?.getBoundingClientRect());
+  }, []);
+
+  useEffect(() => {
     setIndexOfPhoto(0);
   }, [projectTitle]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setRect(ref.current?.getBoundingClientRect());
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  });
 
   const handleDescriptionClick = () => {
     if (window.getSelection().toString()) return;
@@ -92,12 +107,14 @@ const Project = ({ category, projectTitle, language, toggleLanguage }) => {
               >
                 {categoryName}
               </span>
-              <ProjectPager
-                counter={counter}
-                height={rect?.height}
-                project={project}
-                category={category}
-              />
+              {rect?.height !== 0 && (
+                <ProjectPager
+                  counter={counter}
+                  height={rect?.height}
+                  project={project}
+                  category={category}
+                />
+              )}
             </>
           ) : (
             <Link to={`/${categoryName}`} className="project-category-element">
