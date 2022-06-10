@@ -1,11 +1,26 @@
-import { useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Selected from '../Selected/Selected';
-import { links } from '../Press/links';
 import './press.css';
 
 const Press = ({ isOpen, togglePress }) => {
+  const [links, setLinks] = useState([]);
   const ref = useRef(null);
   const selectedIconHeight = ref.current?.getBoundingClientRect()?.height;
+
+  useEffect(() => {
+    fetchLinks();
+  }, []);
+
+  const fetchLinks = async () => {
+    try {
+      const response = await fetch('https://benetamas.com/api/links');
+      const data = await response.json();
+
+      setLinks(data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <>
@@ -36,7 +51,7 @@ const Press = ({ isOpen, togglePress }) => {
                 style={{ textOverflow: 'ellipsis' }}
               >
                 <div>
-                  <div className="press-mobile__domain">{link.domain}</div>
+                  <div className="press-mobile__domain">{link.description}</div>
                   <div className="press-mobile__article-title">
                     {link.title}
                   </div>
