@@ -3,7 +3,7 @@
   display: grid;
   grid-template-rows: calc(100% * 8 / 9 - 0.5px) 1fr;
   grid-gap: 1px;
-  background-color: #000;
+  background-color: var(--primary-color);
 }
 
 .contact-bio {
@@ -58,7 +58,7 @@
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: #000;
+  color: var(--primary-color);
   cursor: pointer;
   padding-left: 21px;
 }
@@ -112,7 +112,7 @@
 .bio-photo {
   width: 100%;
   height: 100%;
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--primary-color);
   background-color: #fff;
   background-image: url('https://benetamas.com/public/settings/February2019/kRhnaWfhz9UtsKbtugBk.jpg');
   background-size: cover;

@@ -1,11 +1,11 @@
 svg {
   display: block;
   margin-left: auto;
-  border-left: solid 1px #000;
+  border-left: solid 1px var(--primary-color);
 }
 
 .selected {
-  stroke: #000;
+  stroke: var(--primary-color);
   fill: transparent;
   stroke-width: 1;
   vector-effect: non-scaling-stroke;

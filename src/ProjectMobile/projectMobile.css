@@ -9,7 +9,7 @@
   justify-content: space-between;
   height: calc((100vh - 12px) / 13);
   width: calc(100% - 21px);
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--primary-color);
   font-size: 1.3rem;
   padding-left: 21px;
   position: fixed;
@@ -20,7 +20,7 @@
 
 .project-mobile__description {
   height: calc((100vh - 12px) / 13 * 3 + 2px);
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .project-mobile__description,
@@ -68,7 +68,7 @@
   text-transform: uppercase;
   height: calc((100vh - 12px) / 13);
   margin-top: calc((100vh - 12px) / 13 * -1);
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--primary-color);
   cursor: pointer;
 }
 

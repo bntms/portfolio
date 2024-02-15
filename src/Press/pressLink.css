@@ -1,5 +1,5 @@
 .pressLink {
-  color: #000;
+  color: var(--primary-color);
   text-transform: uppercase;
   font-family: 'Yantramanav', sans-serif;
   font-size: 0.6rem;

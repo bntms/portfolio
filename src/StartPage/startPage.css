@@ -1,7 +1,7 @@
 .start-page-container {
   height: 100%;
   width: 100%;
-  background-color: #000;
+  background-color: var(--primary-color);
   display: grid;
   grid-template-rows: calc(100% * 8 / 9 - 0.5px) 1fr;
   grid-row-gap: 1px;
@@ -72,7 +72,7 @@
 
 .navigation a {
   font-size: 1rem;
-  color: #000;
+  color: var(--primary-color);
   text-decoration: none;
   text-transform: uppercase;
   align-self: center;

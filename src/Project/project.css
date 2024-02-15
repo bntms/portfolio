@@ -3,7 +3,7 @@
   display: grid;
   grid-template-rows: calc(100% * 8 / 9 - 0.5px) 1fr;
   grid-gap: 1px;
-  background-color: #000;
+  background-color: var(--primary-color);
 }
 
 .project-content {
@@ -67,7 +67,7 @@
   background-color: #fff;
   display: flex;
   align-items: center;
-  color: #000;
+  color: var(--primary-color);
 }
 
 .project-category-selected,
@@ -79,7 +79,7 @@
 .project-category-list li a {
   height: 100%;
   width: 100%;
-  color: #000;
+  color: var(--primary-color);
   text-decoration: none;
   display: flex;
   align-items: center;

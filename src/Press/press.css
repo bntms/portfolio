@@ -3,7 +3,7 @@
   display: grid;
   grid-template-rows: calc(100% * 8 / 9 - 0.5px) 1fr;
   grid-gap: 1px;
-  background-color: #000;
+  background-color: var(--primary-color);
 }
 
 .press {

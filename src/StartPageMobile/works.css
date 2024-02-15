@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   height: calc((100vh - 12px) / 13);
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--primary-color);
   padding-left: 21px;
   text-transform: uppercase;
 }
@@ -35,6 +35,6 @@
 
 .works-mobile a {
   text-decoration: none;
-  color: #000;
+  color: var(--primary-color);
   font-size: 0.85rem;
 }
