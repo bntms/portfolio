@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import Selected from '../Selected/Selected';
+import Close from '../components/Close/Close';
 import './mobileClose.css';
 
 const MobileClose = ({ height }) => (
   <div className="project-mobile-close">
     <Link to="/">
-      <Selected height={height} />
+      <Close height={height} />
     </Link>
   </div>
 );

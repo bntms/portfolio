@@ -1,12 +1,12 @@
 import { useRef } from 'react';
-import Selected from '../Selected/Selected';
+import Close from '../components/Close/Close';
 import useBio from '../Bio/useBio';
 import './bio.css';
 
 const Bio = ({ isOpen, toggleBio, language, toggleLanguage }) => {
   const bio = useBio(language);
   const ref = useRef(null);
-  const selectedIconHeight = ref.current?.getBoundingClientRect()?.height;
+  const closeIconHeight = ref.current?.getBoundingClientRect()?.height;
 
   return (
     <>
@@ -18,7 +18,7 @@ const Bio = ({ isOpen, toggleBio, language, toggleLanguage }) => {
         BENETAMAS
         {isOpen && (
           <div className="bio-mobile__close" onClick={toggleBio}>
-            <Selected height={selectedIconHeight} />
+            <Close height={closeIconHeight} />
           </div>
         )}
       </div>

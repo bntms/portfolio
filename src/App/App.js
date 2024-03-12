@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { LastLocationProvider } from 'react-router-last-location';
-import StartPage from '../StartPage/StartPage';
 import Bio from '../Bio/Bio';
 import Press from '../Press/Press';
 import Works from '../Works/Works';
@@ -104,7 +103,11 @@ const App = () => {
     <Router>
       <LastLocationProvider>
         <Switch>
-          <Route exact path="/" render={() => <StartPage />} />
+          <Route
+            exact
+            path="/"
+            render={() => <Works category="architecture" />}
+          />
           <Route
             exact
             path="/bio"
@@ -130,7 +133,11 @@ const App = () => {
               />
             )}
           />
-          <Route exact path="/*" render={() => <StartPage />} />
+          <Route
+            exact
+            path="/*"
+            render={() => <Works category="architecture" />}
+          />
         </Switch>
       </LastLocationProvider>
     </Router>

@@ -1,0 +1,13 @@
+svg {
+    display: block;
+    margin-left: auto;
+    border-left: solid 1px var(--primary-color);
+  }
+  
+  .close {
+    stroke: var(--primary-color);
+    fill: transparent;
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+  }
+  

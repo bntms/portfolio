@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Selected from '../Selected/Selected';
+import Close from '../components/Close/Close';
 import './projectPager.css';
 
 const ProjectPager = ({ counter, height, category, project }) => (
@@ -22,7 +22,7 @@ const ProjectPager = ({ counter, height, category, project }) => (
     )}
     <div className="project-pager--box project-pager--close">
       <Link to={`/${category}`}>
-        <Selected height={height} />
+        <Close height={height} />
       </Link>
     </div>
   </div>

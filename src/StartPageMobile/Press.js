@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import Selected from '../Selected/Selected';
+import Close from '../components/Close/Close';
 import './press.css';
 
 const Press = ({ isOpen, togglePress }) => {
   const [links, setLinks] = useState([]);
   const ref = useRef(null);
-  const selectedIconHeight = ref.current?.getBoundingClientRect()?.height;
+  const closeIconHeight = ref.current?.getBoundingClientRect()?.height;
 
   useEffect(() => {
     fetchLinks();
@@ -36,7 +36,7 @@ const Press = ({ isOpen, togglePress }) => {
         Press
         {isOpen && (
           <div className="press-mobile__close" onClick={togglePress}>
-            <Selected height={selectedIconHeight} />
+            <Close height={closeIconHeight} />
           </div>
         )}
       </div>

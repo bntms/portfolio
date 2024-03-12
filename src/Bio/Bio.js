@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Wrapper from '../Wrapper/Wrapper';
+import Wrapper from '../components/Wrapper/Wrapper';
 import { useHistory } from 'react-router-dom';
 import useBio from './useBio';
 import { useLastLocation } from 'react-router-last-location';
@@ -104,21 +104,17 @@ const Bio = ({ language, toggleLanguage }) => {
             {!isBioExpanded && <div className="bio-photo" />}
           </section>
         </div>
-        <nav>
-          <ul className="navigation">
-            <li>
-              <span
-                role="button"
-                tabIndex="0"
-                onClick={goBack}
-                onKeyPress={goBack}
-                className="js-focus-visible"
-              >
-                Back
-              </span>
-            </li>
-          </ul>
-        </nav>
+        <footer>
+          <span
+            role="button"
+            tabIndex="0"
+            onClick={goBack}
+            onKeyPress={goBack}
+            className="js-focus-visible"
+          >
+            Back
+          </span>
+        </footer>
       </div>
     </Wrapper>
   );

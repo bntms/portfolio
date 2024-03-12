@@ -22,3 +22,24 @@ html {
   background-color: var(--primary-color);
   color: #fff;
 }
+
+footer {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #fff;
+}
+
+
+footer a, footer span {
+  font-size: 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  align-self: center;
+  display: block;
+  width: max-content;
+  padding-left: 21px;
+  cursor: pointer;
+}

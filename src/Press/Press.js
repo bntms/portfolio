@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import PressLink from './PressLink';
-import Wrapper from '../Wrapper/Wrapper';
+import Wrapper from '../components/Wrapper/Wrapper';
 
 import './press.css';
 
@@ -38,13 +38,9 @@ const Press = () => {
             ))}
           </ul>
         </div>
-        <nav>
-          <ul className="navigation">
-            <li>
-              <a href="#/bio">Back</a>
-            </li>
-          </ul>
-        </nav>
+        <footer>
+          <a href="#/bio">Back</a>
+        </footer>
       </div>
     </Wrapper>
   );

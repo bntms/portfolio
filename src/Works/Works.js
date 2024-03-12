@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Wrapper from '../Wrapper/Wrapper';
-import Selected from '../Selected/Selected';
+import Wrapper from '../components/Wrapper/Wrapper';
+import Selected from '../components/Selected/Selected';
 import { projectsPlaceholder } from './projectsPlaceholder';
 import { placeProjectsInGrid } from './utils';
 import './works.css';
@@ -134,9 +134,9 @@ const Works = ({ category }) => {
                     {isSelected ? (
                       <div className="works-category-selected">
                         {categoryName}
-                        <Link to="/" className="works-close">
+                        <span className="works-selected">
                           <Selected height={selectedIconHeight} />
-                        </Link>
+                        </span>
                       </div>
                     ) : (
                       <Link
@@ -152,13 +152,9 @@ const Works = ({ category }) => {
             </ul>
           </div>
         </div>
-        <nav>
-          <ul className="navigation">
-            <li>
-              <a href="#/bio">BENETAMAS</a>
-            </li>
-          </ul>
-        </nav>
+        <footer>
+          <a href="#/bio">BENETAMAS</a>
+        </footer>
       </div>
     </Wrapper>
   );

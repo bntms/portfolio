@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Wrapper from '../Wrapper/Wrapper';
+import Wrapper from '../components/Wrapper/Wrapper';
 import ProjectPager from './ProjectPager';
 import './project.css';
 
@@ -213,13 +213,9 @@ const Project = ({ category, projectTitle, language, toggleLanguage }) => {
             </ul>
           </div>
         </div>
-        <nav>
-          <ul className="navigation">
-            <li>
-              <a href="#/bio">BENETAMAS</a>
-            </li>
-          </ul>
-        </nav>
+        <footer>
+          <a href="#/bio">BENETAMAS</a>
+        </footer>
       </div>
     </Wrapper>
   );

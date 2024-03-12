@@ -1,11 +1,11 @@
 import { useRef } from 'react';
-import Selected from '../Selected/Selected';
+import Close from '../components/Close/Close';
 import { links } from '../links';
 import './contact.css';
 
 const Contact = ({ isOpen, toggleContact }) => {
   const ref = useRef(null);
-  const selectedIconHeight = ref.current?.getBoundingClientRect()?.height;
+  const closeIconHeight = ref.current?.getBoundingClientRect()?.height;
 
   return (
     <>
@@ -21,7 +21,7 @@ const Contact = ({ isOpen, toggleContact }) => {
         Contact
         {isOpen && (
           <div className="contact-mobile__close" onClick={toggleContact}>
-            <Selected height={selectedIconHeight} />
+            <Close height={closeIconHeight} />
           </div>
         )}
       </div>
